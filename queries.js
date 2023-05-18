@@ -1,8 +1,8 @@
 const Pool = require('pg').Pool
 const pool = new Pool({
   //first user is for vps, second for local db, both passwords are same
-  // user: 'judah',
-  user: 'me',
+  user: 'judah',
+  // user: 'me',
   host: 'localhost',
   database: 'survey',
   password: 'password',
