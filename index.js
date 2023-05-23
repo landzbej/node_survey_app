@@ -1,5 +1,5 @@
 const express = require('express')
-
+//test
 
 const bodyParser = require('body-parser')
 
@@ -15,10 +15,6 @@ app.use(
     extended: true,
   })
 )
-
-
-// const express = require("express");
-// const app = express();
 
 const mongoose = require("mongoose");
 //configure mongoose
@@ -42,12 +38,6 @@ const blogRouter = require("./routes/BlogRoutes");
 //middleware
 app.use(express.json());
 app.use("/api/blogs", blogRouter);
- 
-// app.listen(3002, () => {
-//   console.log("Server is running on port 3002");
-// });
- 
-// module.exports = app;
 
 app.get('/', (request, response) => {
     response.json({ info: 'Node.js, Express, and Postgres API' })
@@ -59,10 +49,6 @@ app.get('/', (request, response) => {
   app.put('/users/:id', db.updateUser)
   app.delete('/users/:id', db.deleteUser)
 
-  // init().then(() => {
-  //   console.log(`App running on port ${port}.`)
-  //   app.listen(3000)
-  // }
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)
 })
